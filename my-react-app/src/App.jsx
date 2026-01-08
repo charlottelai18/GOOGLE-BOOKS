@@ -2,7 +2,7 @@ import { useState } from "react";
 import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
 import BookGrid from "./components/BookGrid/BookGrid";
-import { searchBooks } from "./api/googleBooks";
+import { searchBooks } from "./api/googleBooks.jsx";
 
 function App() {
   const [books, setBooks] = useState([]);
