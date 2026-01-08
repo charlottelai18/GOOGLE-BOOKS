@@ -1,0 +1,75 @@
+.form {
+  display: flex;
+  justify-content: center;
+  margin: 28px 0 48px;
+  padding: 0 16px;
+}
+
+.searchBox {
+  width: min(920px, 100%);
+  display: grid;
+  grid-template-columns: 44px 1fr auto;
+  align-items: center;
+
+  background: #fff;
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
+
+  padding: 10px;
+  gap: 8px;
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  color: rgba(107, 114, 128, 0.85);
+}
+
+.input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  padding: 12px 10px;
+  background: transparent;
+  color: #111827;
+}
+
+.button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 18px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(180deg, #7c5cff, #6d5efc);
+  box-shadow: 0 8px 18px rgba(109, 94, 252, 0.25);
+  transition: transform 120ms ease, filter 120ms ease;
+}
+
+.button:hover {
+  filter: brightness(1.03);
+  transform: translateY(-1px);
+}
+
+.button:active {
+  transform: translateY(0px);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 520px) {
+  .searchBox {
+    grid-template-columns: 44px 1fr;
+    grid-template-rows: auto auto;
+  }
+
+  .button {
+    grid-column: 1 / -1;
+    width: 100%;
+  }
+}
